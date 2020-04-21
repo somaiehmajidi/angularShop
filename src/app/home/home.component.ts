@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
   products = [];
+  selectedProduct;
 
   constructor(private apiService: ApiService) { }
 
@@ -18,4 +19,7 @@ export class HomeComponent implements OnInit {
 		})  
   }
 
+  public selectProduct(product){
+    this.selectedProduct = product;
+  }
 }

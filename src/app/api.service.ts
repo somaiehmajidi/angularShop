@@ -11,5 +11,5 @@ export class ApiService {
 
 	public get(){  
 		return this.httpClient.get(this.SERVER_URL);  
-	}  
+	}
 }
