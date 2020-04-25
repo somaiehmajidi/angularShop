@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
+import { ProComponent } from './product/pro/pro.component';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     HeaderComponent,
     ProductComponent,
+    ProComponent,
     LoginComponent
   ],
   imports: [

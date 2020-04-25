@@ -1,1 +1,35 @@
-<p>pro works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card  style="margin-top:10px;">
+                <mat-card-header>
+                    <mat-card-title>{{product.name}}</mat-card-title>
+                    <mat-card-subtitle>product ID: {{product.id}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src = "{{product.imageUrl}}">
+                        </div>
+                        <div class="col-md-8">
+                            <h3>{{product.price | currency:'USD'}}</h3>
+                            <p>{{product.description}}</p>
+                            <div style="font-weight: lighter;">by: {{product.producer}}</div>
+                            <div style="font-weight: lighter;">
+                                Expire date: {{product.date | date:'fullDate'}}
+                            </div>
+                            <p style="font-weight: lighter;">stock: {{product.quantity}}</p>
+                            <mat-card-actions>
+                                <button mat-raised-button color="warn">add to cart</button>
+                            </mat-card-actions>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <hr>
+                <mat-card-footer>
+                    <a>link1</a>  |  <a>link2</a> | <a>see all products</a>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>   
+</div>

@@ -9,6 +9,8 @@ import { map } from 'rxjs/operators';
 })  
 export class ApiService {
 
+  products: Product[] = [];
+
 	private SERVER_URL = "http://localhost:3000/products";
 	
 	constructor(private httpClient: HttpClient) { }
@@ -27,9 +29,15 @@ export class ApiService {
             for(const key in responseData){
               if (responseData.hasOwnProperty(key)){
                 productArray.push({ ...responseData[key], id: +key});
+                this.products = productArray;
               }
             }
             return productArray;
           }))
     }
+
+  fetchProduct(id: number): Product{
+    return this.products[id];
+  }
+  
 }

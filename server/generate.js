@@ -10,7 +10,7 @@ for (var i = 1; i<= 300; i++) {
     price: faker.commerce.price(),
     imageUrl: "https://source.unsplash.com/1600x900/?product",
     quantity: faker.random.number(),
-    date: faker.date.recent(),
+    date: faker.date.soon(),
     producer: faker.company.companyName()
   });
 }
