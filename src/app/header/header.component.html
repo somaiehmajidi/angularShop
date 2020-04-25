@@ -4,5 +4,11 @@
     </h1>  
     <button mat-button routerLink="/">Home</button>  
     <button mat-button routerLink="/about">About</button>
+    <div>
+        <button mat-button (click)="openDialog()">Login</button>
+        <div *ngIf="username">
+            Hi <span style="font-weight: bold">{{username}}</span>
+        </div>
+    </div>
 </mat-toolbar>
-    
+
