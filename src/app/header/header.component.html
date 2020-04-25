@@ -4,10 +4,12 @@
     </h1>  
     <button mat-button routerLink="/">Home</button>  
     <button mat-button routerLink="/about">About</button>
-    <div>
-        <button mat-button (click)="openDialog()">Login</button>
+    <span class="flex-spacer"></span>
+    <div [ngClass]="{login: username != null}">
+        <button mat-button (click)="openDialog()" class="loginBtn">Login</button>
         <div *ngIf="username">
-            Hi <span style="font-weight: bold">{{username}}</span>
+            Hi <span>{{username}}</span>
+            <button mat-flat-button class="cartBtn">Check Cart!</button>
         </div>
     </div>
 </mat-toolbar>

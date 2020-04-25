@@ -1,7 +1,5 @@
 <h1 mat-dialog-title>Login from</h1>
-<hr>
 <div mat-dialog-content>
-  <p>Enter your user & pass:</p>
   <mat-form-field>
     <input matInput [(ngModel)]="data.username" placeholder="username">
   </mat-form-field>
@@ -9,7 +7,7 @@
     <input matInput [(ngModel)]="data.pass" placeholder="password">
   </mat-form-field>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.username" cdkFocusInitial>Login</button>
+<div mat-dialog-actions style="padding-bottom: 25px;"> 
+  <button mat-stroked-button color="primary" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data.username" cdkFocusInitial>Login</button>
 </div>
