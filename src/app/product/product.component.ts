@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { Product } from '../data.model';
 import { ApiService } from '../api.service';
 
 
@@ -10,13 +12,18 @@ import { ApiService } from '../api.service';
 })
 export class ProductComponent implements OnInit {
   
-  product;
+  loadedProduct: Product[] = [];
+
   constructor(private apiService: ApiService,
               private route: ActivatedRoute,
               ) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(){
+    this.apiService.fetchProducts()
+    .subscribe(Products => {
+      this.loadedProduct = Products;
+      console.log(Products[1]);
+    })
   }
   
 }

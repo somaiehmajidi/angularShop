@@ -1,1 +1,11 @@
 <p>product works!</p>
+<div *ngFor = "let product of loadedProduct">
+    <div>{{product.id}}</div>
+    <div>{{product.name}}</div>
+    <div>{{product.description}}</div>
+    <div>{{product.price}}</div>
+    <div>{{product.imageUrl}}</div>
+    <div>{{product.quantity}}</div>
+    <div>{{product.date}}</div>
+    <div>{{product.producer}}</div>
+</div>
