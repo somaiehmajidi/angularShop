@@ -1,0 +1,5 @@
+.mat-card-content p{
+    line-height: 2.5ex;
+    height: 10ex; /* 2.5ex for each visible line */
+    overflow: hidden;
+}

@@ -13,7 +13,8 @@ import { ApiService } from '../api.service';
 export class ProductComponent implements OnInit {
   
   loadedProduct: Product[] = [];
-
+  selectedProduct: Product[];
+ 
   constructor(private apiService: ApiService,
               private route: ActivatedRoute,
               ) { }
@@ -22,8 +23,11 @@ export class ProductComponent implements OnInit {
     this.apiService.fetchProducts()
     .subscribe(Products => {
       this.loadedProduct = Products;
-      console.log(Products[1]);
     })
+  }
+
+  public selectProduct(product){
+    this.selectedProduct = product;
   }
   
 }
