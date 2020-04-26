@@ -15,10 +15,13 @@
   
       </div>
     <hr>
+</div> -->
+<div class="container">
     <mat-spinner *ngIf="products.length === 0"></mat-spinner>
+    <h6 style="margin: 20px 5px">New Products:</h6>
     <div class="row">
         <div class="col-md-4" *ngFor="let product of products">
-            <mat-card  style="margin-top:10px;">
+            <mat-card >
                 <mat-card-header>
                     <mat-card-title>{{product.name}}</mat-card-title>
                     <mat-card-subtitle>
@@ -32,12 +35,16 @@
                     <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="selectProduct(product)"> Buy product</button>
+                    <button mat-raised-button 
+                            color="basic"
+                            [routerLink]="['/products', product.id]">Details</button>
+                    <button mat-raised-button 
+                    color="warn"
+                    (click)="addToCart(product)">add to cart</button>
                 </mat-card-actions>
             </mat-card>
         </div>
     </div>
-</div> -->
-<div class="container">
-    <p>home works!</p>
+    <br>
+    <button mat-raised-button (click)="openProducts()">See All Products</button>
 </div>

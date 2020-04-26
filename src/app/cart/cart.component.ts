@@ -9,6 +9,8 @@ import { CartService } from '../cart.service';
 export class CartComponent implements OnInit {
 
   items;
+  total: number = 0;
+
   constructor(private cartService: CartService) { }
 
   ngOnInit(){
