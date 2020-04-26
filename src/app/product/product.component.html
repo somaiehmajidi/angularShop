@@ -25,16 +25,15 @@
                         {{product.description}}
                     </p>
                     <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
-                    <mat-card-actions>
-                        <button mat-raised-button 
-                                color="basic"
-                                [routerLink]="['/products', product.id]">Details</button>
-                        <button mat-raised-button 
-                        color="warn"
-                        (click)="addToCart(product)">add to cart</button>
-                    </mat-card-actions>
                 </mat-card-content>
-                
+                <mat-card-actions>
+                    <button mat-raised-button 
+                            color="basic"
+                            [routerLink]="['/products', product.id]">Details</button>
+                    <button mat-raised-button 
+                    color="warn"
+                    (click)="addToCart(product)">add to cart</button>
+                </mat-card-actions>
             </mat-card>
         </div>
     </div>
