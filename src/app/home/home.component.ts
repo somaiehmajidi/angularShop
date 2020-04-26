@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+//import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +7,22 @@ import { ApiService } from '../api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  products = [];
-  selectedProduct;
+  // products = [];
+  // selectedProduct;
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    //private apiService: ApiService
+  ) { }
 
   ngOnInit(){
-    this.apiService.get().subscribe((data: any[])=>{  
-			console.log(data);  
-      this.products = data;  
-      console.log(this.products);
-		})  
+    // this.apiService.get().subscribe((data: any[])=>{  
+		// 	console.log(data);  
+    //   this.products = data;  
+    //   console.log(this.products);
+		// })  
   }
 
-  public selectProduct(product){
-    this.selectedProduct = product;
-  }
+  // public selectProduct(product){
+  //   this.selectedProduct = product;
+  // }
 }
