@@ -1,6 +1,6 @@
 .cartBtn{
-    display: none;
     margin-left: 10px;
+    display: inline-block;
 }
 .flex-spacer{
     flex: 1 1 auto;
@@ -11,9 +11,6 @@
 }
 .login .loginBtn{
     display: none;
-}
-.login .cartBtn{
-    display: inline-block;
 }
 .active{
    text-decoration: underline;

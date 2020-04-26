@@ -13,12 +13,12 @@
     <span class="flex-spacer"></span>
     <div [ngClass]="{login: username != null}">
         <button mat-button (click)="openDialog()" class="loginBtn">Login</button>
-        <div *ngIf="username">
+        <div *ngIf="username" style="display: inline-block;">
             Hi <span>{{username}}</span>
-            <button mat-flat-button 
+        </div>
+        <button mat-flat-button 
                     class="cartBtn"
                     routerLink="/cart" >Check Cart! </button>
-        </div>
     </div>
 </mat-toolbar>
 
