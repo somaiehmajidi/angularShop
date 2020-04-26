@@ -9,12 +9,15 @@
     </button>  
     <button mat-button routerLinkActive="active" routerLink="/about" >About</button>
     <button mat-button routerLinkActive="active" routerLink="/products">products</button>
+    <!-- <span>{{index}}</span> -->
     <span class="flex-spacer"></span>
     <div [ngClass]="{login: username != null}">
         <button mat-button (click)="openDialog()" class="loginBtn">Login</button>
         <div *ngIf="username">
             Hi <span>{{username}}</span>
-            <button mat-flat-button class="cartBtn">Check Cart!</button>
+            <button mat-flat-button 
+                    class="cartBtn"
+                    routerLink="/cart" >Check Cart! </button>
         </div>
     </div>
 </mat-toolbar>

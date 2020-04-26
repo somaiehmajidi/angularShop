@@ -1,0 +1,21 @@
+<div class="container" style="margin-top: 25px;">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Added Items:</p>
+            <mat-card *ngFor="let item of items">
+                <mat-header>
+                    name: <mat-title>{{item.name}}</mat-title>
+                </mat-header>
+                <br>
+                <mat-content>
+                    <div>price: {{item.price | currency }}</div>
+                </mat-content>
+            </mat-card>
+            <br>
+            <div class="cart-action">
+                <button mat-raised-button color="warn">pay</button>
+                <button mat-raised-button color="basic" (click)="clearCart()">empty cart</button>
+            </div>
+        </div>
+    </div>
+</div>

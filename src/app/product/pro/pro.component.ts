@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Product } from "../../data.model";
 import { ApiService } from '../../api.service';
 
+import { CartService } from '../../cart.service';
+
 
 @Component({
   selector: 'app-pro',
@@ -17,7 +19,8 @@ export class ProComponent implements OnInit {
   id: number;
 
   constructor(private apiService: ApiService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private cartService: CartService) { }
 
   ngOnInit(){
 
@@ -34,5 +37,13 @@ export class ProComponent implements OnInit {
         })
     }
     ); 
+    
   }
+
+  addToCart(product){
+    console.log(product);
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
+  }
+
 }

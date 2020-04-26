@@ -3,3 +3,7 @@
     height: 10ex; /* 2.5ex for each visible line */
     overflow: hidden;
 }
+.mat-card-actions{
+    padding: 10px;
+
+}

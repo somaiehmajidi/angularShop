@@ -20,7 +20,9 @@
                             </div>
                             <p style="font-weight: lighter;">stock: {{product.quantity}}</p>
                             <mat-card-actions>
-                                <button mat-raised-button color="warn">add to cart</button>
+                                <button mat-raised-button 
+                                        color="warn"
+                                        (click)="addToCart(product)" >add to cart</button>
                             </mat-card-actions>
                         </div>
                     </div>

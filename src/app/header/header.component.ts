@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,10 @@ export class HeaderComponent implements OnInit {
   username: string;
   pass: string;
 
-  constructor(public dialog: MatDialog) { }
+  index;
+
+  constructor(public dialog: MatDialog,
+              private cart: CartService) { }
 
   ngOnInit(): void {
   }
