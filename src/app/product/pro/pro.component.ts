@@ -6,7 +6,6 @@ import { ApiService } from '../../api.service';
 
 import { CartService } from '../../cart.service';
 
-
 @Component({
   selector: 'app-pro',
   templateUrl: './pro.component.html',

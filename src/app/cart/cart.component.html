@@ -2,7 +2,18 @@
     <div class="row">
         <div class="col-md-12">
             <p>Added Items:</p>
-            <mat-card *ngFor="let item of items">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of items">
+                    <div>{{item.name}}</div>
+                    <div>price: {{item.price | currency }}</div>
+                </li>
+            </ul>
+            <br>
+            <div class="cart-action">
+                <button mat-raised-button color="warn">pay</button>
+                <button mat-raised-button color="basic" (click)="clearCart()">empty cart</button>
+            </div>
+            <!-- <mat-card *ngFor="let item of items">
                 <mat-header>
                     name: <mat-title>{{item.name}}</mat-title>
                 </mat-header>
@@ -10,12 +21,12 @@
                 <mat-content>
                     <div>price: {{item.price | currency }}</div>
                 </mat-content>
-            </mat-card>
+            </mat-card> 
             <br>
             <div class="cart-action">
                 <button mat-raised-button color="warn">pay</button>
                 <button mat-raised-button color="basic" (click)="clearCart()">empty cart</button>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

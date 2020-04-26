@@ -30,9 +30,9 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule,
     FormsModule
   ],
   providers: [],
